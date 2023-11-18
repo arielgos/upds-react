@@ -15,7 +15,7 @@ jobs:
           cd public
           npm install
           npm run build
-          cd build
+          cp -r build/* ../public
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
